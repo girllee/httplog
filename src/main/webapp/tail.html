@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tail log from web</title>
+
+    <style rel="stylesheet">
+        html body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            position: relative
+        }
+
+        header {
+            background-color: #ffe4c4;
+        }
+
+        #console {
+            background: #000;
+            color: #aaa;
+            margin: 0px;
+            padding: 0px;
+            height: 900px;
+            width: 100%;
+            overflow: auto;
+        }
+
+    </style>
+    <script src="cdn/js/ws.js"></script>
+    <script src="cdn/js/httplog.js"></script>
+</head>
+<body>
+<header></header>
+<div id="log-err" style="color:#F00; padding:10px;">
+</div>
+<div id="console">
+</div>
+</body>
+</html>
+<script>
+
+    var err = document.querySelector("#log-err"),
+            cs = document.querySelector("#console"),
+            logFilePath = getQueryString("filePath"),
+            logFileName = getQueryString("fileName");
+    startWS(null, logFilePath, logFileName);
+    addEvent(cs, 'click', function () {
+        reverseScrollFlag();
+    });
+    addEvent(cs, 'dblclick', function () {
+        reverseMsgFlag();
+    });
+
+
+
+
+</script>

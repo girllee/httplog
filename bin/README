@@ -1,0 +1,7 @@
+logGenerator is used to simulate logback appender to generate log.
+
+How to :
+
+cd bin
+
+./logGenerator.sh

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTTP LOG</title>
+    <link rel="stylesheet" href="cdn/css/idx.css" media="screen" type="text/css"/>
+</head>
+
+
+<body>
+<div>
+    <h1>HYC HTTP LOG</h1>
+
+    <p>
+        HYC httplog is a simple "tail command" through http. It implements all the function of tail command which
+        natively provided by linux or other unix operation system. The real time message sent form server to client
+        with WebSocket, and the download function depend on Nginx. This version improves on the first attempt by
+        using WebSocket.
+    </p>
+
+</div>
+
+<footer>
+    <a href="https://log.heyunchou.com/dl/" title="下载日志,需要密码">下载日志: http://log.heyunchou.com/dl/</a>
+    <div>访问路经格式: {ip}:{port}/{appContext}/tail.html?filePath=path1.path2...&fileName=logfileName.log</div>
+    <a href="https://log.heyunchou.com/tail.html?filePath=ta.tx&fileName=hyc-tx-logger.log" title="访问ta hx系统日志">访问ta服务器的tx系统日志: https://log.heyunchou.com/tail.html?filePath=ta.tx&fileName=hyc-tx-logger.log</a>
+
+</footer>
+
+</body>
+</html>

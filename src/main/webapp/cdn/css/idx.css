@@ -1,0 +1,95 @@
+/* CSS3 Isometric Text Effect.*/
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/league_gothic-webfont.eot');
+    src: url('../fonts/league_gothic-webfont.eot?iefix') format('eot'), url('../fonts/league_gothic-webfont.woff') format('woff'), url('../fonts/league_gothic-webfont.ttf') format('truetype'), url('../fonts/league_gothic-webfont.svg#webfontIQSKTUY8') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArchitectsDaughterRegular';
+    src: url('../fonts/architectsdaughter-webfont.eot');
+    src: url('../fonts/architectsdaughter-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/architectsdaughter-webfont.woff') format('woff'), url('../fonts/architectsdaughter-webfont.ttf') format('truetype'), url('../fonts/architectsdaughter-webfont.svg#ArchitectsDaughterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: #fff;
+    width: 1000px;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+    background-color: #2f5faf;
+    background-image: url(../img/blueprint.png);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font: 80px 'LeagueGothicRegular';
+    position: relative;
+    top: -30px;
+    left: 100px;
+    color: rgba(0, 0, 0, 0);
+    -webkit-transform: skew(63deg, -26.6deg);
+    -moz-transform: skew(63deg, -26.6deg);
+    -o-transform: skew(63deg, -26.6deg);
+    -ms-transform: skew(63deg, -26.6deg);
+    transform: skew(63deg, -26.6deg);
+    text-shadow: 0 0 3px rgba(0, 0, 128, 0.25);
+    z-index: 50;
+}
+
+h1:after {
+    content: "HYC HTTP LOG";
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    color: #fff;
+    -webkit-transform: skew(-63deg) scale(1, 0.5);
+    -moz-transform: skew(-63deg) scale(1, 0.5);
+    -o-transform: skew(-63deg) scale(1, 0.5);
+    -ms-transform: skew(-63deg) scale(1, 0.5);
+    transform: skew(-63deg) scale(1, 0.5);
+    text-shadow: -1px -1px 1px #aaa, -2px -2px 1px #999, -3px -3px 1px #888, -4px -4px 1px #777, -5px -5px 1px #666, -6px -6px 1px #555, -7px -7px 5px rgba(0, 0, 128, 0.75);
+    z-index: 100;
+}
+
+p {
+    width: 460px;
+    height: 220px;
+    position: absolute;
+    top: 180px;
+    left: 430px;
+    font: 14px/24px 'ArchitectsDaughterRegular';
+    color: rgba(255, 255, 255, .35);
+    text-align: center;
+    -webkit-transform: skew(63deg, -26.6deg);
+    -moz-transform: skew(63deg, -26.6deg);
+    -o-transform: skew(63deg, -26.6deg);
+    -ms-transform: skew(63deg, -26.6deg);
+    transform: skew(63deg, -26.6deg);
+    position: absolute;
+    z-index: 50;
+}
+
+footer {
+    clear: both;
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    border: 1px;
+    margin: 0 auto; /* 居中 */
+    height: 4em;
+    border: 1px solid #D6D6D6;
+    /*border-top: 1px solid #D6D6D6;*/
+    padding-bottom: 15px;
+    text-align: center;
+    line-height: 22px;
+}

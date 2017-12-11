@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.heyunchou.httplog</groupId>
+    <artifactId>httplog</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>httplog Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!--<httplog.logFileHome>/home/boot/tmp/</httplog.logFileHome>-->
+                <httplog.logFileHome>/Users/mac/Downloads/httplog</httplog.logFileHome>
+            </properties>
+        </profile>
+    </profiles>
+
+    <properties>
+        <!-- Logging -->
+        <slf4j.version>1.7.25</slf4j.version>
+        <xui.devMode>false</xui.devMode>
+        <xui.suffix>.min</xui.suffix>
+    </properties>
+
+    <dependencies>
+
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- Servlet 3.1  and  JSP 2.3 -->
+        <!-- <dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>javax.servlet-api</artifactId>
+             <version>3.1.0</version>
+             <scope>provided</scope>
+         </dependency>
+
+         <dependency>
+             <groupId>javax.servlet.jsp</groupId>
+             <artifactId>javax.servlet.jsp-api</artifactId>
+             <version>2.3.1</version>
+             <scope>provided</scope>
+         </dependency>-->
+
+
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>ROOT</finalName>
+        <!--<plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.3.0</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>compress</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <skip>${xui.devMode}</skip>
+                    <suffix>${xui.suffix}</suffix>
+                    <encoding>UTF-8</encoding>
+                    &lt;!&ndash; 忽略 js 错误警告 &ndash;&gt;
+                    <jswarn>false</jswarn>
+                    <force>false</force>
+                    &lt;!&ndash;<nosuffix>true</nosuffix>&ndash;&gt;
+                    <linebreakpos>-1</linebreakpos>
+                    <includes>
+                        <include>cdn/js/**/*.js</include>
+                        <include>cdn/css/**/*.css</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*.min.js</exclude>
+                        <exclude>**/*.min.css</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <warSourceExcludes>**/*.js,**/*.css</warSourceExcludes>
+                </configuration>
+            </plugin>
+        </plugins>-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+</project>
